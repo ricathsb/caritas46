@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Mihoyo;
+    src: url(../font/zh-cn.ttf);
+  }
+  *{
+    margin: 0;
+    font-family: Mihoyo;
+    color: white;
+  }
+  header{
+    background-image: url(../../image/random/backgroung-image.png);
+  }
+  :root {
+    --default-size: 0.7vw;
+  }
+  .logo{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .navigate-bar-top-1{
+    background-image: linear-gradient(to bottom right, #26619c, black);
+  }
+  
+  .navigate-bar-top-content{
+    display: flex;
+  } 
+  
+  .nav-list{
+    margin-left: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .nav-list:hover{
+    border-bottom: 3px solid white;
+  }
+  
+.main {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height:max-content;
+    width: 50vw;
+    margin-left: 25vw;
+  }
+  li{
+    list-style-type: none;
+  }
+  a{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+  }
+  a::after{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+  }
+  li::after{
+    list-style-type: none;
+  }
+  ul{
+    padding: 30px;
+  }
+  
+  body{
+    background-color: #090335;}
+
+
+  th {
+    padding: 1vw !important;
+    table-layout: fixed;
+
+  }
+  td {
+    padding-bottom: 3vw;
+    table-layout: fixed;
+
+  }
+h1{
+  padding-top: 1vw  ;
+text-align: center;
+}
+
+.calendar{
+  table-layout: fixed;
+}
+.calendar-desc{
+    font-size: 15px;
+    padding: 1vw;
+}
+.calendar-header {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-anchor{
+    font-size: 1.14em !important;
+  }

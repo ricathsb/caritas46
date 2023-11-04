@@ -1,0 +1,82 @@
+@font-face {
+    font-family:genshin;
+    src: url(/font/zh-cn.ttf);
+}
+*{
+    margin: 0;
+    font-family: genshin;
+}
+body {
+    background-color: black;
+}
+tr{
+    font-family:genshin;
+    text-align: center;
+    font-size: 10px;
+    color: aliceblue;
+    padding: 20px   ;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing : 0 0px ;  
+    border-color: rgb(13, 79, 137);
+   
+}
+
+h1 {
+    font-size: 30px;
+    font-family: genshin;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 10pt;
+    margin-bottom: 10pt;
+}
+li{
+    list-style-type: none;
+  }
+a{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+  }
+a::after{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+  }
+li::after{
+    list-style-type: none;
+  }
+ul{
+    padding: 30px;
+  }
+img {
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+}
+.navigate-bar-top-1{
+  background-image: linear-gradient(to bottom right, #26619c, black);
+}
+
+.navigate-bar-top-content{
+  display: flex;
+} 
+
+.nav-list{
+  margin-left: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.nav-list:hover{
+  border-bottom: 3px solid white;
+}
+.img-nav{
+  width: 75px;
+  height: 75px;
+}
+.isian{
+  font-size: 1.7em
+}

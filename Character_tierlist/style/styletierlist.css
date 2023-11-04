@@ -1,0 +1,131 @@
+@font-face {
+    font-family: genshin;
+    src: url(../../font/zh-cn.ttf);
+}
+:root {
+    --item-margin: 2%;
+    --item-per-line: 3;
+    --th-l-width: 4%;
+    --td-width: calc((100% - var(--th-l-width)) / 3);
+    --table-width: 60%;
+    --default-size: 0.7vw;
+}
+* {
+    font-family: genshin;
+    color: white;
+    margin: 0;
+    font-size: var(--default-size);
+}
+header{
+    background-image: url(../../image/random/backgroung-image.png);
+  }
+body {
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 4em;
+}
+h2 {
+    font-size: 2.3em;
+    padding-bottom: 1vh;
+}
+li{
+    list-style-type: none;
+  }
+a{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+  }
+a::after{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+  }
+li::after{
+    list-style-type: none;
+  }
+ul{
+    padding: 30px;
+  }
+
+th { 
+    padding: 2vh 0 2vh 0;
+}
+
+table, tr, th, td {
+    border: 1pt solid rgb(95, 95, 193);
+    border-spacing: 0;
+}
+table {
+    width: var(--table-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+td {
+    width: var(--td-width);
+}
+.th-l {
+    width: var(--th-l-width);
+}
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.tierlist-item {
+    text-decoration: none;
+    padding: 0;
+    margin: var(--item-margin);
+    width: calc((100% - (2 * var(--item-per-line) * var(--item-margin))) / var(--item-per-line));
+    overflow: hidden;
+    border-radius: 20%;
+    background-color: rgb(61, 43, 20);    
+}
+.img-char-tierlist {
+    background-color: #581494;
+    width: 100%;
+}
+
+.logo{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .navigate-bar-top-1{
+    background-image: linear-gradient(to bottom right, #26619c, black);
+  }
+  
+  .navigate-bar-top-content{
+    display: flex;
+  } 
+  
+  .nav-list{
+    margin-left: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .nav-list a {
+    font-size: 1.7em;
+
+  }
+  .nav-list:hover{
+    border-bottom: 3px solid white;
+  }
+  .link {
+    margin-right: 2vw;
+    margin-left: 2vw;
+    font-size: 0.6em;
+  }
+  .link:hover{
+    color:rgb(95, 95, 193) ;
+  }
+  

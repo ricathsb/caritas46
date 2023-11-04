@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#333333" />
+    <meta property="og:title" content="Paimon.moe" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://paimon.moe/paimon-og.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;900&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- <script src="https://js.sentry-cdn.com/446c4cef71a54aafb71b698555500b7d.min.js" crossorigin="anonymous"></script> -->
+    <script async defer data-domain="paimon.moe" src="https://plausible.paimon.moe/js/paimonmoe.js"></script>
+
+    <link rel="preconnect" href="https://securepubads.g.doubleclick.net/" crossorigin />
+    <link rel="preconnect" href="https://cdn.consentmanager.mgr.consensu.org/" crossorigin />
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-messaging.js"></script>
+
+    <style lang="postcss">
+      html {
+        height: 100%;
+        background: #25294a;
+      }
+    </style>
+
+    <meta http-equiv="content-security-policy" content=""><title>Prototype Amber - Paimon.moe</title>
+	<link href="/_app/immutable/assets/__layout-3b291d31.css" rel="stylesheet">
+	<link href="/_app/immutable/assets/Icon-1d6f2eac.css" rel="stylesheet">
+	<link href="/_app/immutable/assets/Tooltip-b7ccfe99.css" rel="stylesheet">
+	<link rel="modulepreload" href="/_app/immutable/start-2c008e10.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-945af5c5.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-297b2742.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/preload-helper-c28b9807.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/singletons-eca981c1.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-81d4c2a3.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-098f0b06.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/account-46edb3de.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/dayjs.min-86a0a74f.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/runtime.esm-e388ba87.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/toast-d1292c2b.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/stores-0f8937ae.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Icon-ae58c6cb.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Button-62da6bca.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/todo-6c3c79cf.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/server-0bd67cfc.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/weapons/_id_.svelte-930e4093.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/dynamic-import-helper-f6190917.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/build-8eb1f9aa.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/weaponList-087cb7d3.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/itemList-d8cb0cfa.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/characters-c934fa2d.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/helper-c0826422.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Ad-33622e91.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Tooltip-908e91c9.js">
+
+    <script>
+      window.AdSlots = window.AdSlots || { cmd: [], disableScripts: ['gpt'] };
+    </script>
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js?n=2"></script>
+    <script async src="https://kumo.network-n.com/dist/app.js?n=2" site="paimonmoe"></script>
+  </head>
+  <body class="font-body h-full bg-background-secondary">
+    <div id="sapper" class="flex flex-col h-full">
+
+
+<div class="flex items-center lg:hidden fixed w-full h-16 header bg-background z-50 shadow-md overflow-hidden svelte-1stouby"><a href="/" class="flex-1 pl-4 md:pl-8 font-display text-3xl font-black text-white relative z-10 pt-2">Paimon<span class="text-xl text-primary">.moe</span></a>
+  <div class="p-8 cursor-pointer"><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:white;" class=" svelte-1mzwbk9"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div>
+</div>
+
+
+
+<div class="sidebar fixed w-full lg:w-64 h-full flex-col bg-background items-center z-50 
+    hidden lg:flex svelte-ov9vi7"><div class="paimon-bg overflow-x-hidden h-full w-full lg:w-64 fixed z-0 svelte-ov9vi7"></div>
+  <div class="flex flex-col flex-1 items-center overflow-y-auto w-full px-5 py-5 z-10 svelte-ov9vi7"><a href="/" class="relative py-2"><h1 class="font-display text-3xl font-black text-white py-4 relative z-10">Paimon
+    <span class="absolute right-0 text-xl text-primary z-10" style="top: 5px;">.moe</span></h1></a>
+    
+    <a class="w-full rounded-xl ease-in duration-150  svelte-1mm4ag5" href="/"><div class="group w-full py-3 flex items-center px-4 cursor-pointer transition-colors"><div class="h-8 w-8 flex justify-center mr-3 opacity-75 group-hover:opacity-100 ease-in duration-150"><img class="h-full svelte-1mm4ag5" src="/images/home.png" alt="Home"></div>
+    <span class="font-body font-semibold flex-1 text-lg leading-none text-gray-500 group-hover:text-white ease-in duration-150 svelte-1mm4ag5">Home</span></div>
+</a>
+    <a class="w-full rounded-xl ease-in duration-150  svelte-1mm4ag5" href="/characters"><div class="group w-full py-3 flex items-center px-4 cursor-pointer transition-colors"><div class="h-8 w-8 flex justify-center mr-3 opacity-75 group-hover:opacity-100 ease-in duration-150"><img class="h-full svelte-1mm4ag5" src="/images/characters.png" alt="Character"></div>
+    <span class="font-body font-semibold flex-1 text-lg leading-none text-gray-500 group-hover:text-white ease-in duration-150 svelte-1mm4ag5">Character</span></div>
+</a>
+    <a class="w-full rounded-xl ease-in duration-150  svelte-1mm4ag5" href="/wish"><div class="group w-full py-3 flex items-center px-4 cursor-pointer transition-colors"><div class="h-8 w-8 flex justify-center mr-3 opacity-75 group-hover:opacity-100 ease-in duration-150"><img class="h-full svelte-1mm4ag5" src="/images/wish.png" alt="Wish Counter"></div>
+    <span class="font-body font-semibold flex-1 text-lg leading-none text-gray-500 group-hover:text-white ease-in duration-150 svelte-1mm4ag5">Wish Counter</span></div>
+</a>
+    <a class="w-full rounded-xl ease-in duration-150  svelte-1mm4ag5" href="/calculator"><div class="group w-full py-3 flex items-center px-4 cursor-pointer transition-colors"><div class="h-8 w-8 flex justify-center mr-3 opacity-75 group-hover:opacity-100 ease-in duration-150"><img class="h-full svelte-1mm4ag5" src="/images/calculator.png" alt="Calculator"></div>
+    <span class="font-body font-semibold flex-1 text-lg leading-none text-gray-500 group-hover:text-white ease-in duration-150 svelte-1mm4ag5">Calculator</span></div>
+</a>
+    <a class="w-full rounded-xl ease-in duration-150  svelte-1mm4ag5" href="/todo"><div class="group w-full py-3 flex items-center px-4 cursor-pointer transition-colors"><div class="h-8 w-8 flex justify-center mr-3 opacity-75 group-hover:opacity-100 ease-in duration-150"><img class="h-full svelte-1mm4ag5" src="/images/todos.png" alt="Todo List"></div>
+    <span class="font-body font-semibold flex-1 text-lg leading-none text-gray-500 group-hover:text-white ease-in duration-150 svelte-1mm4ag5">Todo List</span></div>
+</a>
+    <div class="w-full rounded-xl ease-in duration-150 parent active svelte-cq0c49"><div class="flex absolute transform translate-x-full child top-0 bottom-0 svelte-cq0c49"><div class="w-10 h-full"></div>
+    <div class="bg-background shadow-lg flex flex-col justify-center p-2 -mt-2 rounded-r-xl"><a class="w-full rounded-xl ease-in duration-150  svelte-cq0c49" href="/items"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Items
+            </span></div>
+        </a><a class="w-full rounded-xl ease-in duration-150  svelte-cq0c49" href="/achievement"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Achievements
+            </span></div>
+        </a><a class="w-full rounded-xl ease-in duration-150  svelte-cq0c49" href="/reminder"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Reminder
+            </span></div>
+        </a><a class="w-full rounded-xl ease-in duration-150  svelte-cq0c49" href="/furnishing"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Furnishing
+            </span></div>
+        </a><a class="w-full rounded-xl ease-in duration-150 active-child svelte-cq0c49" href="/weapons"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Weapons
+            </span></div>
+        </a><a class="w-full rounded-xl ease-in duration-150  svelte-cq0c49" href="/artifacts"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Artifacts
+            </span></div>
+        </a><a class="w-full rounded-xl ease-in duration-150  svelte-cq0c49" href="/fishing"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Fishing
+            </span></div>
+        </a><a class="w-full rounded-xl ease-in duration-150  svelte-cq0c49" href="/radiant-spincrystal"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Radiant Spincrystal
+            </span></div>
+        </a><a class="w-full rounded-xl ease-in duration-150  svelte-cq0c49" href="/calendar"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Calendar
+            </span></div>
+        </a><a class="w-full rounded-xl ease-in duration-150  svelte-cq0c49" href="/banners"><div class="w-full py-3 flex items-center px-4 cursor-pointer transition-colors text-gray-500 hover:text-white ease-in duration-150"><div class="h-8 mr-3 flex justify-center items-center leading-none"><span class="svelte-cq0c49">●</span></div>
+            <span class="font-body font-semibold flex-1 text-lg leading-none svelte-cq0c49">Character Reruns
+            </span></div>
+        </a></div></div>
+  <div class="group w-full py-3 flex items-center px-4 cursor-pointer transition-colors"><div class="h-8 w-8 flex justify-center mr-3 opacity-75 group-hover:opacity-100 ease-in duration-150"><img class="h-full svelte-cq0c49" src="/images/items.png" alt="Database"></div>
+    <span class="parent-span font-body font-semibold flex-1 text-lg leading-none text-gray-500 group-hover:text-white ease-in duration-150 svelte-cq0c49">Database</span></div></div>
+
+    <a class="w-full rounded-xl ease-in duration-150  svelte-1mm4ag5" href="/timeline"><div class="group w-full py-3 flex items-center px-4 cursor-pointer transition-colors"><div class="h-8 w-8 flex justify-center mr-3 opacity-75 group-hover:opacity-100 ease-in duration-150"><img class="h-full svelte-1mm4ag5" src="/images/timeline.png" alt="Timeline"></div>
+    <span class="font-body font-semibold flex-1 text-lg leading-none text-gray-500 group-hover:text-white ease-in duration-150 svelte-1mm4ag5">Timeline</span></div>
+</a>
+    <a class="w-full rounded-xl ease-in duration-150  svelte-1mm4ag5" href="/tcg"><div class="group w-full py-3 flex items-center px-4 cursor-pointer transition-colors"><div class="h-8 w-8 flex justify-center mr-3 opacity-75 group-hover:opacity-100 ease-in duration-150"><img class="h-full svelte-1mm4ag5" src="/images/tcg.png" alt="TCG"></div>
+    <span class="font-body font-semibold flex-1 text-lg leading-none text-gray-500 group-hover:text-white ease-in duration-150 svelte-1mm4ag5">TCG</span></div>
+</a>
+    <a class="w-full rounded-xl ease-in duration-150  svelte-1mm4ag5" href="/settings"><div class="group w-full py-3 flex items-center px-4 cursor-pointer transition-colors"><div class="h-8 w-8 flex justify-center mr-3 opacity-75 group-hover:opacity-100 ease-in duration-150"><img class="h-full svelte-1mm4ag5" src="/images/settings.png" alt="Settings"></div>
+    <span class="font-body font-semibold flex-1 text-lg leading-none text-gray-500 group-hover:text-white ease-in duration-150 svelte-1mm4ag5">Settings</span></div>
+</a></div>
+  <div class="pt-2 pb-4 flex flex-col items-center w-full z-20 svelte-ov9vi7" style="width: 248px; background: linear-gradient(180deg, rgba(32, 36, 66, 0) 0%, rgba(32, 36, 66, 1) 10%);"><div class="locale-selector flex items-center justify-center mb-4 mt-0 py-2 cursor-pointer rounded-xl hover:bg-black hover:bg-opacity-50 relative w-40 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="English" src="/images/locales/en.svg">
+      <span class="text-gray-400 svelte-ov9vi7">English</span>
+      <div class="locale-dropdown svelte-ov9vi7"><div class="bg-black grid grid-cols-2 rounded-xl overflow-hidden svelte-ov9vi7"><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="中文(简体)" src="/images/locales/zh.svg">
+              <span class="text-gray-400 svelte-ov9vi7">中文(简体)</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="中文(繁體)" src="/images/locales/tw.svg">
+              <span class="text-gray-400 svelte-ov9vi7">中文(繁體)</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="Français" src="/images/locales/fr.svg">
+              <span class="text-gray-400 svelte-ov9vi7">Français</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="Deutsch" src="/images/locales/de.svg">
+              <span class="text-gray-400 svelte-ov9vi7">Deutsch</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="日本語" src="/images/locales/ja.svg">
+              <span class="text-gray-400 svelte-ov9vi7">日本語</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="한국어" src="/images/locales/ko.svg">
+              <span class="text-gray-400 svelte-ov9vi7">한국어</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="ภาษาไทย" src="/images/locales/th.svg">
+              <span class="text-gray-400 svelte-ov9vi7">ภาษาไทย</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="Tiếng Việt" src="/images/locales/vi.svg">
+              <span class="text-gray-400 svelte-ov9vi7">Tiếng Việt</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="Indonesia" src="/images/locales/id.svg">
+              <span class="text-gray-400 svelte-ov9vi7">Indonesia</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="Español" src="/images/locales/es.svg">
+              <span class="text-gray-400 svelte-ov9vi7">Español</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="Português" src="/images/locales/pt.svg">
+              <span class="text-gray-400 svelte-ov9vi7">Português</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="Русский" src="/images/locales/ru.svg">
+              <span class="text-gray-400 svelte-ov9vi7">Русский</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="Türkçe" src="/images/locales/tr.svg">
+              <span class="text-gray-400 svelte-ov9vi7">Türkçe</span>
+            </div><div class="flex items-center justify-center py-2 cursor-pointer hover:bg-gray-900 svelte-ov9vi7"><img class="w-4 h-4 rounded-full mr-2 svelte-ov9vi7" alt="Italiano" src="/images/locales/it.svg">
+              <span class="text-gray-400 svelte-ov9vi7">Italiano</span>
+            </div></div></div></div></div>
+</div>
+  
+  
+    
+    <div class="fixed left-0 right-0 bottom-0 text-center px-4 md:left-auto md:max-w-screen-sm" style="z-index:99999;"></div>
+    <main style="flex: 1 0 auto;">
+<div class="lg:ml-64 pt-20 lg:pt-8 max-w-screen-xl"><div class="flex flex-col-reverse xl:flex-row items-start"><div class="px-4 md:px-8"><h1 class="font-display font-black text-4xl md:text-5xl text-white">Prototype Amber</h1>
+      <div class="text-rare-from text-2xl flex items-center z-0 -mt-2 md:-mt-4"><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+        <svg viewBox="0 0 24 24" style=" width:0.6000000000000001rem; height:0.6000000000000001rem; fill:white;" class="mx-2 mt-1 svelte-1mzwbk9"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path></svg>
+        <p class="text-base text-white font-semibold mt-1">Catalyst</p>
+        <svg viewBox="0 0 24 24" style=" width:0.6000000000000001rem; height:0.6000000000000001rem; fill:white;" class="mx-2 mt-1 svelte-1mzwbk9"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path></svg>
+        <p class="text-base text-white font-semibold mt-1 capitalize">forging</p></div>
+      <p class="text-gray-200"><!-- HTML_TAG_START -->A dully gilded catalyst secretly guarded in the Blackcliff Forge. It seems to glow with the very light from the sky.<!-- HTML_TAG_END --></p>
+      <div class="p-4 rounded-xl bg-item flex flex-col mt-4"><p class="font-black font-display text-xl text-white">Gilding</p>
+          <p class="skill-description text-white"><!-- HTML_TAG_START -->Using an Elemental Burst regenerates <span style="color: #99FFFFFF;">4/4.5/5/5.5/6</span> Energy every 2s for 6s. All party members will regenerate <span style="color: #99FFFFFF;">4%/4.5%/5%/5.5%/6%</span> HP every 2s for this duration.<!-- HTML_TAG_END --></p></div>
+      <div style="" class="flex justify-center mt-4" id="nn_mobile_mpu1"></div>
+      <div class="mt-4 max-w-screen-lg"><h3 class="font-display font-bold text-2xl text-white">Recommended Characters</h3>
+          <div class="flex flex-wrap -mx-1 -mb-2"><a class="flex items-center bg-background hover:bg-item rounded-xl px-2 py-1 mb-2 mx-1" href="/characters/baizhu"><img src="/images/characters/baizhu.png" alt="Baizhu" class="w-12 h-12 mr-2 rounded-full">
+                <div class="-mx-1"><p class="text-white mx-1">SUPPORT</p></div>
+              </a><a class="flex items-center bg-background hover:bg-item rounded-xl px-2 py-1 mb-2 mx-1" href="/characters/barbara"><img src="/images/characters/barbara.png" alt="Barbara" class="w-12 h-12 mr-2 rounded-full">
+                <div class="-mx-1"><p class="text-white mx-1">SUPPORT</p></div>
+              </a><a class="flex items-center bg-background hover:bg-item rounded-xl px-2 py-1 mb-2 mx-1" href="/characters/mona"><img src="/images/characters/mona.png" alt="Mona" class="w-12 h-12 mr-2 rounded-full">
+                <div class="-mx-1"><p class="text-white mx-1">FREEZE SUPPORT</p></div>
+              </a><a class="flex items-center bg-background hover:bg-item rounded-xl px-2 py-1 mb-2 mx-1" href="/characters/sangonomiya_kokomi"><img src="/images/characters/sangonomiya_kokomi.png" alt="Sangonomiya Kokomi" class="w-12 h-12 mr-2 rounded-full">
+                <div class="-mx-1"><p class="text-white mx-1">SUPPORT</p></div>
+              </a></div></div></div>
+    <img class="h-64 w-auto ml-4 max-w-full" src="/images/weapons/prototype_amber.png" alt="Prototype Amber"></div>
+  <div class="mt-4 block overflow-x-auto whitespace-nowrap w-screen md:w-auto px-4 md:px-8"><div class="table max-w-full rounded-xl border border-gray-200 border-opacity-25"><table class="text-gray-200 w-full"><tr><td class="text-center whitespace-nowrap border-gray-700 border-r font-semibold px-2">ASC</td>
+          <td class="text-center whitespace-nowrap border-gray-700 border-r font-semibold px-2">LVL</td>
+          <td class="text-center whitespace-nowrap border-gray-700 border-r font-semibold px-2">Base ATK</td>
+          <td class="text-center whitespace-nowrap border-gray-700 border-r font-semibold px-2">HP</td>
+          <td class="text-center whitespace-nowrap border-gray-700 font-semibold px-2">Ascension Materials</td></tr>
+        <tr><td rowspan="5" class="text-center border-t border-r border-gray-700 px-2">0</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">1</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">42</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">9%
+              </td>
+            <td rowspan="5" class="text-center border-t border-gray-700 pl-2"><span class="w-max inline-block"></span>
+              </td>
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">5</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">60</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">10.5%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">10</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">77</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">12.3%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">15</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">95</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">14.1%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">20</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">109</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">15.9%
+              </td>
+            
+          </tr><tr><td rowspan="5" class="text-center border-t border-r border-gray-700 px-2">1</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">20</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">135</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">15.9%
+              </td>
+            <td rowspan="5" class="text-center border-t border-gray-700 pl-2"><span class="w-max inline-block"><i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_veiled_lead_elixir.png" alt="Mist Veiled Lead Elixir" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>3</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_grass_pollen.png" alt="Mist Grass Pollen" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>3</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/firm_arrowhead.png" alt="Firm Arrowhead" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>2</span></span>
+                      </i>
+
+
+                    <span class="pt-2 block"><img src="/images/mora.png" alt="mora" class="inline w-6 h-6">
+                      <span>5,000</span>
+                    </span></span>
+              </td>
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">25</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">152</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">17.7%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">30</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">170</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">19.5%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">35</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">187</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">21.4%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">40</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">205</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">23.2%
+              </td>
+            
+          </tr><tr><td rowspan="3" class="text-center border-t border-r border-gray-700 px-2">2</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">40</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">231</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">23.2%
+              </td>
+            <td rowspan="3" class="text-center border-t border-gray-700 pl-2"><span class="w-max inline-block"><i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_veiled_mercury_elixir.png" alt="Mist Veiled Mercury Elixir" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>3</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_grass_pollen.png" alt="Mist Grass Pollen" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>12</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/firm_arrowhead.png" alt="Firm Arrowhead" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>8</span></span>
+                      </i>
+
+
+                    <span class="pt-2 block"><img src="/images/mora.png" alt="mora" class="inline w-6 h-6">
+                      <span>15,000</span>
+                    </span></span>
+              </td>
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">45</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">248</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">25%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">50</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">266</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">26.8%
+              </td>
+            
+          </tr><tr><td rowspan="3" class="text-center border-t border-r border-gray-700 px-2">3</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">50</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">292</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">26.8%
+              </td>
+            <td rowspan="3" class="text-center border-t border-gray-700 pl-2"><span class="w-max inline-block"><i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_veiled_mercury_elixir.png" alt="Mist Veiled Mercury Elixir" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>6</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_grass.png" alt="Mist Grass" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>6</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/sharp_arrowhead.png" alt="Sharp Arrowhead" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>6</span></span>
+                      </i>
+
+
+                    <span class="pt-2 block"><img src="/images/mora.png" alt="mora" class="inline w-6 h-6">
+                      <span>20,000</span>
+                    </span></span>
+              </td>
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">55</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">309</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">28.6%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">60</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">327</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">30.4%
+              </td>
+            
+          </tr><tr><td rowspan="3" class="text-center border-t border-r border-gray-700 px-2">4</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">60</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">353</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">30.4%
+              </td>
+            <td rowspan="3" class="text-center border-t border-gray-700 pl-2"><span class="w-max inline-block"><i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_veiled_gold_elixir.png" alt="Mist Veiled Gold Elixir" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>3</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_grass.png" alt="Mist Grass" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>12</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/sharp_arrowhead.png" alt="Sharp Arrowhead" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>9</span></span>
+                      </i>
+
+
+                    <span class="pt-2 block"><img src="/images/mora.png" alt="mora" class="inline w-6 h-6">
+                      <span>30,000</span>
+                    </span></span>
+              </td>
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">65</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">370</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">32.3%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">70</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">388</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">34.1%
+              </td>
+            
+          </tr><tr><td rowspan="3" class="text-center border-t border-r border-gray-700 px-2">5</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">70</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">414</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">34.1%
+              </td>
+            <td rowspan="3" class="text-center border-t border-gray-700 pl-2"><span class="w-max inline-block"><i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_veiled_gold_elixir.png" alt="Mist Veiled Gold Elixir" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>6</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_grass_wick.png" alt="Mist Grass Wick" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>9</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/weathered_arrowhead.png" alt="Weathered Arrowhead" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>6</span></span>
+                      </i>
+
+
+                    <span class="pt-2 block"><img src="/images/mora.png" alt="mora" class="inline w-6 h-6">
+                      <span>35,000</span>
+                    </span></span>
+              </td>
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">75</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">431</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">35.9%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">80</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">449</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">37.7%
+              </td>
+            
+          </tr><tr><td rowspan="3" class="text-center border-t border-r border-gray-700 px-2">6</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">80</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">475</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">37.7%
+              </td>
+            <td rowspan="3" class="text-center border-t border-gray-700 pl-2"><span class="w-max inline-block"><i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_veiled_primo_elixir.png" alt="Mist Veiled Primo Elixir" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>4</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/mist_grass_wick.png" alt="Mist Grass Wick" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>18</span></span>
+                      </i>
+
+<i class="svelte-354a1f"><span class="mr-2 bg-background rounded-xl"><img src="/images/items/weathered_arrowhead.png" alt="Weathered Arrowhead" class="inline w-8 h-8">
+                          <svg viewBox="0 0 24 24" style=" width:0.75rem; height:0.75rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg><span>12</span></span>
+                      </i>
+
+
+                    <span class="pt-2 block"><img src="/images/mora.png" alt="mora" class="inline w-6 h-6">
+                      <span>45,000</span>
+                    </span></span>
+              </td>
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">85</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">492</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">39.5%
+              </td>
+            
+          </tr><tr>
+            <td class="text-center border-t border-r border-gray-700 px-2">90</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">510</td>
+            <td class="text-center border-t border-r border-gray-700 px-2">41.3%
+              </td>
+            
+          </tr></table></div>
+    <div class="fixed top-0 right-0 m-8"><div style="" class="ml-4" id="nn_mpu1"></div></div></div>
+  <div style="" class="" id="nn_lb2"></div>
+  <div style="" class="" id="nn_mobile_lb1"></div></div></main>
+  
+
+<div class="lg:ml-64 px-4 md:px-8 py-8 flex flex-col md:pb-24"><p class="text-gray-400">Paimon.moe is not affiliated with HoYoverse.<br>
+    Genshin Impact, game content and materials are trademarks and copyrights of HoYoverse.</p>
+  <div class="flex mt-4 md:items-center flex-col md:flex-row"><a class="text-gray-400 hover:text-primary" href="https://discord.gg/tPURAYgHV9" target="_blank"><svg viewBox="0 0 24 24" style=" width:2.25rem; height:2.25rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 15.79,14.73 14.54,15L15.25,15.9C15.25,15.9 17.33,16.03 18.73,14.22C18.73,14.22 18.84,11.12 17.12,7.53C17.12,7.53 15.59,6.36 13.9,6.33L13.73,6.5C13.73,6.5 15.53,7.03 16.56,7.95C16.56,7.95 14.68,6.8 12,6.8M9.93,10.59C10.58,10.59 11.11,11.16 11.1,11.86C11.1,12.55 10.58,13.13 9.93,13.13C9.29,13.13 8.77,12.55 8.77,11.86C8.77,11.16 9.28,10.59 9.93,10.59M14.1,10.59C14.75,10.59 15.27,11.16 15.27,11.86C15.27,12.55 14.75,13.13 14.1,13.13C13.46,13.13 12.94,12.55 12.94,11.86C12.94,11.16 13.45,10.59 14.1,10.59Z"></path></svg>
+      Join Our Discord</a>
+    <div class="text-gray-400 mt-4 md:mt-0 md:ml-4 flex flex-col md:pl-4 md:border-l border-gray-600"><span class="text-gray-500">Community Links</span>
+      <div><a class="text-gray-400 hover:text-primary whitespace-nowrap" href="https://github.com/MadeBaruna/paimon-moe" target="_blank"><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
+          GitHub</a>
+        <a class="text-gray-400 hover:text-primary whitespace-nowrap" href="https://twitter.com/MadeBaruna" target="_blank"><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"></path></svg>
+          Dev Twitter</a></div></div>
+    <div class="text-gray-400 mt-4 md:mt-0 md:ml-4 flex flex-col md:pl-4 md:border-l border-gray-600"><span class="text-gray-500">Official Links</span>
+      <div><a class="text-gray-400 hover:text-primary mr-1 whitespace-nowrap" href="https://discord.gg/4nbWsCGjjE" target="_blank"><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 15.79,14.73 14.54,15L15.25,15.9C15.25,15.9 17.33,16.03 18.73,14.22C18.73,14.22 18.84,11.12 17.12,7.53C17.12,7.53 15.59,6.36 13.9,6.33L13.73,6.5C13.73,6.5 15.53,7.03 16.56,7.95C16.56,7.95 14.68,6.8 12,6.8M9.93,10.59C10.58,10.59 11.11,11.16 11.1,11.86C11.1,12.55 10.58,13.13 9.93,13.13C9.29,13.13 8.77,12.55 8.77,11.86C8.77,11.16 9.28,10.59 9.93,10.59M14.1,10.59C14.75,10.59 15.27,11.16 15.27,11.86C15.27,12.55 14.75,13.13 14.1,13.13C13.46,13.13 12.94,12.55 12.94,11.86C12.94,11.16 13.45,10.59 14.1,10.59Z"></path></svg>
+          Discord</a>
+        <a class="text-gray-400 hover:text-primary mr-1 whitespace-nowrap" href="https://www.facebook.com/Genshinimpact/" target="_blank"><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"></path></svg>
+          Facebook</a>
+        <a class="text-gray-400 hover:text-primary whitespace-nowrap" href="https://www.reddit.com/r/Genshin_Impact/" target="_blank"><svg viewBox="0 0 24 24" style=" width:1.5rem; height:1.5rem; fill:currentColor;" class=" svelte-1mzwbk9"><path d="M14.5 15.41C14.58 15.5 14.58 15.69 14.5 15.8C13.77 16.5 12.41 16.56 12 16.56C11.61 16.56 10.25 16.5 9.54 15.8C9.44 15.69 9.44 15.5 9.54 15.41C9.65 15.31 9.82 15.31 9.92 15.41C10.38 15.87 11.33 16 12 16C12.69 16 13.66 15.87 14.1 15.41C14.21 15.31 14.38 15.31 14.5 15.41M10.75 13.04C10.75 12.47 10.28 12 9.71 12C9.14 12 8.67 12.47 8.67 13.04C8.67 13.61 9.14 14.09 9.71 14.08C10.28 14.08 10.75 13.61 10.75 13.04M14.29 12C13.72 12 13.25 12.5 13.25 13.05S13.72 14.09 14.29 14.09C14.86 14.09 15.33 13.61 15.33 13.05C15.33 12.5 14.86 12 14.29 12M22 12C22 17.5 17.5 22 12 22S2 17.5 2 12C2 6.5 6.5 2 12 2S22 6.5 22 12M18.67 12C18.67 11.19 18 10.54 17.22 10.54C16.82 10.54 16.46 10.7 16.2 10.95C15.2 10.23 13.83 9.77 12.3 9.71L12.97 6.58L15.14 7.05C15.16 7.6 15.62 8.04 16.18 8.04C16.75 8.04 17.22 7.57 17.22 7C17.22 6.43 16.75 5.96 16.18 5.96C15.77 5.96 15.41 6.2 15.25 6.55L12.82 6.03C12.75 6 12.68 6.03 12.63 6.07C12.57 6.11 12.54 6.17 12.53 6.24L11.79 9.72C10.24 9.77 8.84 10.23 7.82 10.96C7.56 10.71 7.2 10.56 6.81 10.56C6 10.56 5.35 11.21 5.35 12C5.35 12.61 5.71 13.11 6.21 13.34C6.19 13.5 6.18 13.62 6.18 13.78C6.18 16 8.79 17.85 12 17.85C15.23 17.85 17.85 16.03 17.85 13.78C17.85 13.64 17.84 13.5 17.81 13.34C18.31 13.11 18.67 12.6 18.67 12Z"></path></svg>
+          Reddit</a></div></div>
+    <div class="text-gray-400 mt-4 md:mt-0 md:ml-4 flex flex-col justify-center h-full md:pl-4 md:border-l border-gray-600"><a class="text-gray-400 hover:text-primary" href="/privacy-policy">Privacy Policy</a>
+      
+      <a class="text-gray-400 hover:text-primary nn-cmp-show" href="#">Cookie Settings</a></div></div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="12safk3">
+		import { set_public_env, start } from "/_app/immutable/start-2c008e10.js";
+
+		set_public_env({});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="12safk3"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 27],
+				params: {id:"prototype_amber"},
+				routeId: "weapons/[id]"
+			}
+		});
+	</script></div>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"81bbd57a7e425fba","version":"2023.10.0","token":"d9490b10d81a41539b7ac2cb88c11be9"}' crossorigin="anonymous"></script>
+</body>
+</html>
