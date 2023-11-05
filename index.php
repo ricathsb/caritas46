@@ -4,31 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage with Search Bar</title>
-    <link rel="stylesheet" href="homepage/homepage.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="homepage/homepage.css"> -->
 </head>
 <body>
-        
-    <div class="navigate-bar-top">
-        <div class="navigate-bar-top-1">
-            <ul class="navigate-bar-top-content">
-                <li class="nav-list"><a href="homepage/homepage.php"><img src="https://play-lh.googleusercontent.com/MITqgDSnTFzREWAG7UI3vjIa40oB_J_zWxhQJ2XZlDOosxP9mhOOhgbQc9QovuZeauAR" height="50px"></a></li>
-                <li class="nav-list"><a href="character_list/characterlist.php">Character</a></li>
-                <li class="nav-list"><a href="weapon.php">Weapon</a></li>
-                <li class="nav-list"><a href="Character_tierlist/tierlistc0.html">Tier List</a></li>
-                <li class="nav-list"><a href="calendar/calendar.php">Calendar</a></li>
-                <li class="nav-list"><a href="#">About</a></li>
-            </ul>
+    <div class="navigate-bar-top-1">
+        <div class="navigate-bar-top-content">
+            <a class="navbar-anchor" href=""><img class="navbar-logo" src="https://play-lh.googleusercontent.com/MITqgDSnTFzREWAG7UI3vjIa40oB_J_zWxhQJ2XZlDOosxP9mhOOhgbQc9QovuZeauAR"></a>
+            <a class="navbar-anchor" href="character_list/characterlist.php">Character</a>
+            <a class="navbar-anchor" href="weapon/weapon.php">Weapon</a>
+            <a class="navbar-anchor" href="tier_list/c0.html">Tier List</a>
+            <a class="navbar-anchor" href="calendar/calendar.php">Calendar</a>
+            <a class="navbar-anchor" href="about/about.html">About</a>
+            <a class="navbar-anchor" href="new/new.php">new</a>
         </div>
-        
+    </div>     
     <div class="search-container">
         <form method="post">
             <p>What are you looking for Traveler?</p>
             <input id="search" name="search" type="text" placeholder="Insert Character Name Here...">
             <input id="submit" name="submit" type="submit">
         </form>
-        <div id="searchResults"></div>
-    </div>
-    </div>
+    <div id="searchResults"></div>
 </body>
 </html>
 
