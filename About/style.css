@@ -1,0 +1,412 @@
+/* ------ GENERAL ------ */
+@font-face {
+font-family: Mihoyo;
+src: url(font/genshin.ttf);
+}
+
+:root {
+    --h1-size: 4vh;
+    --h2-size: 3vh;
+    --h3-size: 2.5vh;
+    --default-size: 2vh;
+    --table-border-blue: #5f5fc1;
+    --navbar-height: 10vh;
+    --navbar-logo-height: 7vh;
+    --navbar-margin-side: 3vw;
+    --navbar-margin-bottom: 3vh;
+    --default-font-size: 2vh;
+    --background-color: #090335;
+    --search-border-radius: 5pt;
+    --character-list-width: 8vw;
+    --transition-duration: 0.5s;
+    --character-list-filter-margin: 0.3vw;
+    --character-list-margin: 1vh;
+    --character-list-filter-margin-bottom: 3vh;
+    --character-asc-margin: 3vh;
+    --character-table-padding: 2vh;
+    --character-h2-padding: 2vh;
+    --box-shadow: 5px;
+    --character-h3-margin: 4vh;
+    --character-h3-padding: 1.5vh;
+    --character-all-margin-bottom: 4vh;
+    --character-info-img: 30%;
+    --character-small-img: 2.5vw;
+    --character-small-img-margin: 1vw;
+    --character-medium-img: 5vw;
+    --character-big-img: 25vw;
+    --character-img-background-height: 60vh;
+    --weapon-table-th-padding: 2vh;
+    --weapon-button-width: 7vw;
+    --weapon-img-size: 10vh;
+    --weapon-text-padding: 1vw;
+    --tier-list-item-margin: 2%;
+    --tier-list-item-per-line: 3;
+    --tier-list-th-l-width: 4%;
+    --tier-list-td-width: calc((100% - var(--tier-list-th-l-width)) / 3);
+    --tier-list-table-width: 60%;
+    --tier-list-link-margin: 2vw;
+}
+/* ------ SCROLLBAR ------ */
+::-webkit-scrollbar {
+    width: 1.15vh;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: var(--search-border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+*{
+    font-family: Mihoyo;
+    font-size: var(--default-size);
+    color: white;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color) !important;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+h3 {
+    font-size: var(--h3-size);
+}
+
+table {
+    border-spacing: 0;
+    margin: auto;
+    border-spacing: 0;
+}
+
+p {
+    line-height: 1.3;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* ------ NAVBAR ------ */
+.navigate-bar-top-1{
+    background-image: linear-gradient(to bottom right, #26619c, black);
+    position: sticky;
+    top: 0;
+    margin-bottom: var(--navbar-margin-bottom);
+}
+
+.navigate-bar-top-content{
+    display: flex;
+    justify-content: center;
+    height: var(--navbar-height);
+    align-items: center;
+} 
+
+.navbar-logo {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: calc(var(--navbar-logo-height));
+}
+
+.navbar-anchor{
+    font-size: var(--default-font-size) !important;
+    margin: auto var(--navbar-margin-side) auto var(--navbar-margin-side);
+}
+
+.navbar-anchor:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2pt;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* ------ SEARCH ------ */
+.search-container {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+    
+#search {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: var(--search-border-radius);
+    color: black;
+}
+    
+#submit {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: var(--search-border-radius);
+    cursor: pointer;
+}
+
+
+/* ------ CHARACTER LIST ------ */
+.character-list-table {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.character-list-item {
+    width: var(--character-list-width);
+    text-align: center;
+    padding: var(--character-list-margin);
+}
+
+.character-list-item:hover {
+    opacity: 50%;
+    transition-duration: var(--transition-duration);
+
+}
+
+.character-list-element-img {
+    height: 7vh;
+}
+
+.character-list-img {
+    width: var(--character-list-width);
+    border-top-right-radius: 15%;
+    border-top-left-radius: 15%;
+}
+
+.character-list-div {
+    background-color: #3d2b14;
+    border-radius: 15%;
+}
+
+.star-4 {
+    background-color: #7b5c90;
+}
+
+.star-5 {
+    background-color: #926d45;
+}
+
+.character-list-filter {
+    transition-duration: var(--transition-duration);
+    background-color: transparent;
+    border: none;
+    margin-left: var(--character-list-filter-margin);
+    margin-right: var(--character-list-filter-margin);
+    margin-bottom: var(--character-list-filter-margin-bottom);
+}
+
+.character-list-filter:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* ----- CHARACTER ----- */
+.main {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.character-asc {
+    margin: var(--character-asc-margin);
+}
+
+
+.character-table-padding {
+    padding : var(--character-table-padding) !important;
+}
+
+.character-h2 {
+    padding: var(--character-h2-padding);
+    border-radius: var(--search-border-radius);
+    background-color: #0d002c;
+    box-shadow: var(--box-shadow) var(--box-shadow) 0 0 #26619C;
+}
+
+.character-h3 {
+    margin: var(--character-h3-margin) 0 var(--character-h3-margin) 0;
+    padding: var(--character-h3-padding);
+    border-left: 5px solid #ffffff;
+}
+
+.character-desc {
+    margin-bottom: var(--character-all-margin-bottom);
+}
+
+.character-table{
+    margin-bottom: var(--character-all-margin-bottom); 
+}
+
+.character-info-img {
+    width: var(--character-info-img);
+}
+
+.character-small-img {
+    width: var(--character-small-img);
+    height: var(--character-small-img);
+    margin-right: var(--character-small-img-margin);
+}
+
+.character-medium-img {
+    width: var(--character-medium-img);
+}
+
+.character-big-img {
+    width: var(--character-big-img);
+}
+
+.character-team table{
+    width: 60%;
+}
+
+.character-img-background {
+    height: var(--character-img-background-height);
+    border: 1pt solid #ffffff;
+    border-top: none;
+    border-left: none;
+}
+
+
+/* ----- WEAPON ----- */
+.weapon-table {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.weapon-table th,
+.weapon-table tr,
+.weapon-table td {
+    border: solid 1pt var(--table-border-blue);
+}
+
+.weapon-table th {
+    padding: var(--weapon-table-th-padding);
+}
+
+.weapon-button {
+    width: var(--weapon-button-width);
+    background-color: rgb(0, 10, 68);
+    border-radius: var(--search-border-radius);
+    text-align: center;
+}
+
+.weapon-button:hover {
+    transition-duration: var(--transition-duration);
+    background-color: #4CAF50;
+    color: black !important;
+}
+
+.weapon-img {
+    height: var(--weapon-img-size);
+    width: var(--weapon-img-size);
+    background-color: #581494;
+    border-radius: 20%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.weapon-text{
+    padding: var(--weapon-text-padding);
+    font-size: var(--table-font-size);
+    text-align: center;
+}
+
+.weapon-img-td{
+    text-align: center;
+    width: calc(var(--weapon-img-size) + 3vw);
+}
+
+
+/* ----- TIER LIST ----- */
+.tier-list-th { 
+    padding: var(--weapon-table-th-padding);
+}
+
+.tier-list-table,
+.tier-list-table th,
+.tier-list-table tr,
+.tier-list-table td {
+    border: 1pt solid var(--table-border-blue);
+}
+
+.tier-list-table {
+    width: var(--tier-list-table-width);
+}
+
+.tier-list-td {
+    width: var(--tier-list-td-width);
+}
+
+.tier-list-th-l {
+    width: var(--tier-list-th-l-width)
+}
+
+.tier-list-item {
+    text-decoration: none;
+    margin: var(--tier-list-item-margin);
+    width: calc((100% - (2 * var(--tier-list-item-per-line) * var(--tier-list-item-margin))) / var(--tier-list-item-per-line));
+    overflow: hidden;
+    border-radius: 20%;
+    background-color: rgb(61, 43, 20);    
+}
+
+.tier-list-item:hover {
+    transition-duration: var(--transition-duration);
+    opacity: 0.5;
+}
+
+.tier-list-img {
+    background-color: #581494;
+    width: 100%;
+}
+
+.tier-list-link {
+    margin: var(--tier-list-link-margin);
+    font-size: calc(1.5 * var(--default-font-size));
+}
+
+.tier-list-link:hover{
+    color:var(--table-border-blue);
+    transition-duration: var(--transition-duration);
+}
+  
