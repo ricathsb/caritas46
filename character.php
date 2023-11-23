@@ -96,8 +96,8 @@ if(isset($_GET['character'])){
             <a class="navbar-anchor" href="weapon/weapon.php">Weapon</a>
             <a class="navbar-anchor" href="tier_list/c0.html">Tier List</a>
             <a class="navbar-anchor" href="calendar/calendar.php">Calendar</a>
+            <a class="navbar-anchor" href="artifact/artifact.php">Artifact</a>
             <a class="navbar-anchor" href="about/about.html">About</a>
-            <a class="navbar-anchor" href="new/new.php">new</a>
         </div>
     </div>    
     <div class="main">
@@ -135,7 +135,7 @@ if(isset($_GET['character'])){
                     </tr>
                     <tr class="character-table-padding">
                         <td class="character-table-padding">Weapon</td>
-                        <td class="character-table-padding" align="center" colspan="2"><img src="image/utility/<?= strtolower(str_replace(" ", "_", $mainWeapon)).".webp" ?>" alt="<?= strtolower(str_replace(" ", "_", $mainWeapon)).".webp" ?>" class="character-small-img" style="background-color: white;"><?= $mainWeapon ?></td>
+                        <td class="character-table-padding" align="center" colspan="2"><img src="image/utility/<?= strtolower(str_replace(" ", "_", $mainWeapon)).".webp" ?>" alt="<?= strtolower(str_replace(" ", "_", $mainWeapon)).".webp" ?>" class="character-small-img"><?= $mainWeapon ?></td>
                     </tr>
                     <tr class="character-table-padding">
                         <td class="character-table-padding" rowspan="2">Voice Actors</td>

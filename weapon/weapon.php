@@ -29,8 +29,8 @@ $count = count($results);
             <a class="navbar-anchor" href="../weapon/weapon.php">Weapon</a>
             <a class="navbar-anchor" href="../tier_list/c0.html">Tier List</a>
             <a class="navbar-anchor" href="../calendar/calendar.php">Calendar</a>
+            <a class="navbar-anchor" href="artifact/artifact.php">Artifact</a>        
             <a class="navbar-anchor" href="../about/about.html">About</a>
-            <a class="navbar-anchor" href="../new/new.php">new</a>
         </div>
     </div>    
     <div id="container">

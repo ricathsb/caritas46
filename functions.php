@@ -51,4 +51,16 @@ function getCharacterByElement($element) {
     }
     return query("SELECT * FROM `character` where `elemen`='$element' ORDER BY `name`");
 }
+
+function artifactAll() {
+    global $itemPerPage;
+    return query("SELECT DISTINCT * FROM `artifact` ORDER BY name;");
+}
+
+function artifactRarity($rarity) {
+    global $itemPerPage;
+    return query("SELECT DISTINCT * FROM `artifact` WHERE `rarity` = $rarity ORDER BY name;");
+}
+
+
 ?>
